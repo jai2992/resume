@@ -60,5 +60,19 @@
       </div>
     </div>
   </main>
+  <!-- Add this script element at the end of your HTML body to include JavaScript -->
+<script>
+  // Add an interactive animation to the header
+  const header = document.querySelector('header');
+  header.addEventListener('click', () => {
+    header.style.transform = 'rotate(360deg)';
+  });
+
+  // Reset the header rotation on mouseout
+  header.addEventListener('mouseout', () => {
+    header.style.transform = 'rotate(0deg)';
+  });
+</script>
+
 </body>
 </html>
