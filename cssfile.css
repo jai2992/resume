@@ -1,65 +1,52 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Add a subtle box shadow to header, main, and section */
+header, main, .section {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #000;
-    color: #fff;
-    line-height: 1.6;
+/* Add a hover effect for header, main, and section */
+header:hover, main:hover, .section:hover {
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-header {
-    background: linear-gradient(to right bottom, #ff0000, #8001ff);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+/* Add a smooth transition to all elements */
+.transition {
+    transition: all 0.3s ease;
+}
+
+/* Add an animation for the header */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 header h1 {
     font-size: 36px;
     margin-bottom: 10px;
+    animation: fadeIn 0.5s;
 }
 
-header h2 {
-    font-size: 24px;
-}
-
+/* Add a scale animation to the main content */
 main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #333;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    transform-origin: center;
 }
 
-.section {
-    margin-bottom: 30px;
-    padding: 20px;
-    background: linear-gradient(to bottom, #333, #000);
-    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.1);
+main:hover {
+    transform: scale(1.02);
 }
 
-.section-header {
-    background: linear-gradient(to right bottom, #ff0000, #8001ff);
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+/* Add a subtle hover effect to links */
+a {
+    color: #00ffff;
+    transition: color 0.3s ease;
 }
 
-.section-header h2 {
-    font-size: 28px;
-}
-
-.section-content {
-    margin: 10px 0;
-}
-
-footer {
-    background: #000;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+a:hover {
+    color: #ff0000;
 }
